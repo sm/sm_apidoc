@@ -20,6 +20,7 @@ array print my_array
 : # Now we append the element "five" to the array named "my_array"
 array append "my_array" "five"
 
+
 : # The array contents should now be:
 : # one two three four five
 array print my_array

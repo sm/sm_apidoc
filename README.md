@@ -8,7 +8,7 @@ corresponding API.
 
 In order to install the set to be able to use the examples,
 
-    sm set install api-docs https://github.com/sm/sm-api-docs.git
+    sm ext install apidoc https://github.com/sm/sm-api-docs.git
 
 Once you have installed the set you can then proceed to show examples for a
 specific API command run that API command prefixed with sm.
