@@ -6,11 +6,11 @@ set -v # Turn on verbose logging, so that the following will present a tutorial.
 : # file as simply 'api/files' but is done explicitly here for demonstration.
 includes api/files
 
-: # We can test if a file is empty and act according to the result:
-if file is empty /etc/profile
+: # We can test if a file is nonempty and act according to the result:
+if file is nonempty /etc/profile
 then
-  log "/etc/profile is empty :( "
+  log "/etc/profile is nonempty :)"
 else
-  log "/etc/profile is not empty :) "
+  log "/etc/profile is empty :("
 fi
 

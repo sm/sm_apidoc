@@ -1,0 +1,29 @@
+#!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+: # Load the array module API, this is normally done in the shell/includes
+: # file as simply 'api/files' but is done explicitly here for demonstration.
+includes api/files
+
+: # Let's write the string 'Hello, World!' to /tmp/example_file
+file write string "Hello, World! " to /tmp/example_file
+
+: # The file should now contain:
+: # Hello, World!
+cat /tmp/example_file
+
+: # If we write again, it will overwrite the existing contents:
+file write string "Hello," to /tmp/example_file
+
+: # The file should now contain:
+: # Hello,
+cat /tmp/example_file
+
+: # Let's write another string to the file but this time append:
+file write append string "World! " to /tmp/example_file
+
+: # The file should now contain:
+: # Hello,
+: # World!
+cat /tmp/example_file
