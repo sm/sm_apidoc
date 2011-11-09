@@ -1,1 +1,29 @@
 #!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+: # First we declare the my_array variable that we will use, as an array ('-a')
+typeset -a my_array
+
+: # Now we assign five elements into our array.
+my_array=(one one two two three three four four five five)
+
+
+: # Now we load the array module API, this is normally done in the shell/includes
+: # file as simply 'api/array' but is done explicitly here for demonstration.
+includes api/array
+
+
+: # Printing out the array at this point should show these five elements:
+: # one one two two three three four four five five
+array print my_array
+
+
+: # Filter out all duplicated elements from the array.
+array unique my_array
+
+
+: # The array should now contain:
+: # one two three four five
+array print my_array
+

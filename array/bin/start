@@ -1,1 +1,13 @@
 #!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+: # Now we load the array module API, this is normally done in the shell/includes
+: # file as simply 'api/array' but is done explicitly here for demonstration.
+includes api/array
+
+
+: # This should print out the index of the first element of an array:
+: # 1
+array start
+
