@@ -2,7 +2,7 @@
 
 .SH SYNOPSIS
 .B sm 
-[array] {options...} action {action-params}
+{options...} array action {action-params}
 
 .SH DESCRIPTION
 S{cripting,ystem} Manager (SM) Framework (Core) API docs
@@ -13,27 +13,27 @@ To load the array module API, add 'api/array' to the shell/includes file.
 .SH Actions
 .TP 13
 .B append {destination} {origin}
-Adds the content of origin array to the destination array 
+Adds the content of the origin array to the destination array 
 .TP 13
 .B each
-loop over each element in the array
+loops over each element in a given array
 .TP 13
-.B first
-print out the following string to standard output
+.B first?
+prints out the first elements to standard output
 .TP 13
 .B is empty
-test if the array is empty
+tests if a given array is empty
 .TP 13
 .B is even
-test if the array is even
+tests if the given array has an even number of elements
 .TP 13
 .B is nonempty
-test if the array is nonempty
+tests if the given array is nonempty
 .TP 13
 .B join {separator}
- print the array elements separated by the separator string
+ print the given array elements separated by the provided string
 .TP 13
-.B largest {array2}
+.B largest {array}
 prints the largest (character count) element in a given array
 .TP 13
 .B last
@@ -49,7 +49,7 @@ removes the last element of a given array
 inserts an element at the end of an array
 .TP 13
 .B shift [placeholder variable] {origin}
-shifts the first element off the array and prints to standard out if no placeholder variable is given
+shifts the first element off the origin array and prints to standard out if no placeholder variable is given
 .TP 13
 .B sort asc
 Sort array elements in ascending order
@@ -66,7 +66,7 @@ Prints out the index of the first element of a given array. This allows you to g
 		a[$(array start)]  # one
 .TP 13
 B. unique
-Filter out all duplicated elements from a given array
+Filters out all duplicated elements from a given array
 .TP 13
 B. unshift {origin} {item}
 Appends an item to the beginning of a given array
