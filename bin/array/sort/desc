@@ -2,29 +2,26 @@
 
 set -v # Turn on verbose logging, so that the following will present a tutorial.
 
-: # First we declare the my_array variable that we will use, as an array ('-a')
+# array(s) module api is loaded with the line 'api/array' in shell/includes.
+
+# First we declare the my_array variable that we will use, as an array ('-a')
 typeset -a my_array
 
-: # Now we assign five elements into our array.
+# Now we assign five elements into our array.
 my_array=(one two three four five)
 
 
-: # Now we load the array module API, this is normally done in the shell/includes
-: # file as simply 'api/array' but is done explicitly here for demonstration.
-includes api/array
-
-
-: # Printing out the array at this point should show these five elements:
-: # one two three four five
+# Printing out the array at this point should show these five elements:
+# one two three four five
 array print my_array
 
 
-: # Sorting the array
+# Sorting the array
 array sort desc my_array
 
 
-: # Printing out the array at this point should show these five elements:
-: # two three four five one
+# Printing out the array at this point should show these five elements:
+# two three four five one
 array print my_array
 
 

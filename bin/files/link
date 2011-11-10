@@ -2,7 +2,24 @@
 
 set -v # Turn on verbose logging, so that the following will present a tutorial.
 
-: # Load the array module API, this is normally done in the shell/includes
-: # file as simply 'api/files' but is done explicitly here for demonstration.
-includes api/files
+# file(s) module api is loaded with the line 'api/files' in shell/includes.
+
+file create /tmp/files_link_example_v0 /tmp/files_link_example_v1
+
+# We can create symbolic links to a given file,
+file link symbolic from /tmp/files_link_example_v0 to /tmp/files_link_example
+
+# Let's see the new symbolic link (symlink) details,
+ls -l /tmp/files_link_*
+
+# Now if we want to alter the link we have to add the force flag otherwise we'd
+# get an error as by default it will not overwrite the link,
+file link symbolic force from /tmp/files_link_example_v1 to /tmp/files_link_example
+
+# Let's see where our symbolic link (symlink) points to now,
+ls -l /tmp/files_link_*
+
+# Cleanup after ourselves,
+files remove \
+  /tmp/files_link_example /tmp/files_link_example_v0 /tmp/files_link_example_v1
 

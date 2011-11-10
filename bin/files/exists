@@ -2,7 +2,13 @@
 
 set -v # Turn on verbose logging, so that the following will present a tutorial.
 
-: # Load the array module API, this is normally done in the shell/includes
-: # file as simply 'api/files' but is done explicitly here for demonstration.
-includes api/files
+# file(s) module api is loaded with the line 'api/files' in shell/includes.
+
+# We can test if a file exists and act according to the result:
+if file exists /bin/zsh
+then
+  log "zsh exists in /bin! "
+else
+  log "zsh does not exist in /bin! "
+fi
 

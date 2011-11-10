@@ -2,7 +2,17 @@
 
 set -v # Turn on verbose logging, so that the following will present a tutorial.
 
-: # Load the array module API, this is normally done in the shell/includes
-: # file as simply 'api/paths' but is done explicitly here for demonstration.
-includes api/paths
+# path(s) module api is loaded with the line 'api/paths' in shell/includes.
+
+# Now we will create a path
+path create /tmp/paths/copy/example
+
+# We can change permissions of the path and make it read only
+path copy from /tmp/paths/copy/example to /tmp/paths/copy/example_v2
+
+# Let's see the paths,
+ls -l /tmp/paths/copy
+
+# Now we clean up after ourselves.
+paths remove /tmp/paths
 

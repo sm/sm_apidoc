@@ -2,26 +2,28 @@
 
 set -v # Turn on verbose logging, so that the following will present a tutorial.
 
-: # First we declare the my_array variable that we will use, as an array ('-a')
+# array(s) module api is loaded with the line 'api/array' in shell/includes.
+
+# First we declare the my_array variable that we will use, as an array ('-a')
 typeset -a my_array
 
-: # Now we assign five elements into our array.
+# Now we assign five elements into our array.
 my_array=(one two three four five)
 
 
-: # Now we load the array module API, this is normally done in the shell/includes
-: # file as simply 'api/array' but is done explicitly here for demonstration.
-includes api/array
-
-: # Printing out the array at this point should show these five elements:
-: # one two three four five
+# Printing out the array at this point should show these five elements:
+# one two three four five
 array print my_array
 
 
-: # We can loop over each element in the array and execute a code string where
-: # the element is stored in the variable $element
+# We can loop over each element in the array and execute a code string where
+# the element is stored in the variable $element
 array each my_array run 'printf "~$element~ "'
 
 
-: # We can also specify the variable name to set:
+# We can also specify the variable name to set:
 array each my_array variable count run 'printf "~$count~ "'
+
+
+# We can also specify variable with 'as' and the command to run with 'do'
+array each my_array as count do 'printf "~$count~ "'

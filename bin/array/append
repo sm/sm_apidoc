@@ -2,26 +2,24 @@
 
 set -v # Turn on verbose logging, so that the following will present a tutorial.
 
-: # First we declare the my_array variable that we will use, as an array ('-a')
+# array(s) module api is loaded with the line 'api/array' in shell/includes.
+
+# First we declare the my_array variable that we will use, as an array ('-a')
 typeset -a my_array
 
-: # Now we assign four elements into our array.
+# Now we assign four elements into our array.
 my_array=(one two three four)
 
-: # Now we load the array module API, this is normally done in the shell/includes
-: # file as simply 'api/array' but is done explicitly here for demonstration.
-includes api/array
-
-: # Printing out the array at this point should show these four elements:
-: # one two three four
+# Printing out the array at this point should show these four elements:
+# one two three four
 array print my_array
 
 
-: # Now we append the element "five" to the array named "my_array"
+# Now we append the element "five" to the array named "my_array"
 array append "my_array" "five"
 
 
-: # The array contents should now be:
-: # one two three four five
+# The array contents should now be:
+# one two three four five
 array print my_array
 
