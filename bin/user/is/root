@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+# array(s) module api is loaded with the line 'api/array' in shell/includes.
+
+# We can check if the current user is root, and act on the result
+if user is root
+then
+  log "The script is running as root! "
+else
+  log "The script is not running as root! "
+fi
+

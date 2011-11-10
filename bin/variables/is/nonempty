@@ -1,0 +1,29 @@
+#!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+# variable(s) module api is loaded with the line 'api/variable' in shell/includes.
+
+# Declare some variables, but do not populate them.
+
+typeset one
+
+# We can test if given variables are empty.
+if variable is nonempty one
+then
+  log "The variable 'one' is nonempty."
+else
+  log "The variable 'one' is empty."
+fi
+
+# Let's populate one of them
+one=1
+
+# We can test if given variables are empty.
+if variable is nonempty one
+then
+  log "The variable 'one' is nonempty."
+else
+  log "The variable 'one' is empty."
+fi
+
