@@ -4,4 +4,18 @@ set -v # Turn on verbose logging, so that the following will present a tutorial.
 
 # path(s) module api is loaded with the line 'api/paths' in shell/includes.
 
+# Now we will create a path
+path create /tmp/paths/move/example
+
+# Let's see the path and it's contents,
+ls -l /tmp/paths/move_*
+
+# We can change permissions of the path and make it read only
+path move from /tmp/paths/move/example to /tmp/paths/move/example_v2
+
+# Let's see the renamed path and it's contents,
+ls -l /tmp/paths/move/
+
+# Now we clean up after ourselves.
+path remove /tmp/paths
 

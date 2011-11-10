@@ -4,3 +4,22 @@ set -v # Turn on verbose logging, so that the following will present a tutorial.
 
 # path(s) module api is loaded with the line 'api/paths' in shell/includes.
 
+# Now we will create a path
+path create /tmp/paths/chomd
+
+# We can change permissions of the path and make it read only
+path chmod recursively mode 0644 /tmp/paths/chmod
+
+# Let's see the effects,
+ls -l /tmp/paths/chmod
+
+# Make the path executable
+path chmod recursively mode 0755 /tmp/paths/chmod
+
+# Let's see the effects,
+ls -l /tmp/paths/chmod
+
+# Now we clean up after ourselves.
+path remove /tmp/paths/chmod
+
+

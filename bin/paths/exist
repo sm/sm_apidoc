@@ -4,4 +4,5 @@ set -v # Turn on verbose logging, so that the following will present a tutorial.
 
 # path(s) module api is loaded with the line 'api/paths' in shell/includes.
 
+# TODO: examples
 

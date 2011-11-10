@@ -4,4 +4,13 @@ set -v # Turn on verbose logging, so that the following will present a tutorial.
 
 # path(s) module api is loaded with the line 'api/paths' in shell/includes.
 
+# Now we will create a path
+path create /tmp/paths/remove
+
+# Now let's checkout the path and it's contents,
+
+ls -l /tmp/paths/
+
+# Cleanup after ourselves
+path remove /tmp/paths
 

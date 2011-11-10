@@ -4,3 +4,18 @@ set -v # Turn on verbose logging, so that the following will present a tutorial.
 
 # path(s) module api is loaded with the line 'api/paths' in shell/includes.
 
+# Now we will create a path
+path create /tmp/path/chown
+
+# We can change the owner of the path, provided the user doing the changing that
+# the script is running as has permissions to do so. For this example we will
+# change the owner to the current script user.
+path chown $USER /tmp/paths/chown
+
+# Let's see the effects, although unfortunately this one is a bit trivial.
+ls -l /tmp/paths/chown
+
+# Now we clean up after ourselves.
+path remove /tmp/path/chown
+
+
