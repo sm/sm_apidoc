@@ -2,11 +2,9 @@
 
 set -v # Turn on verbose logging, so that the following will present a tutorial.
 
-: # Load the array module API, this is normally done in the shell/includes
-: # file as simply 'api/files' but is done explicitly here for demonstration.
-includes api/files
+# file(s) module api is loaded with the line 'api/files' in shell/includes.
 
-: # Expand the file to the full (absolute, not relative) path listing
-: # This should output '/etc/passwd'
+# Expand the file to the full (absolute, not relative) path listing
+# This should output '/etc/passwd'
 file expand /etc/../passwd
 

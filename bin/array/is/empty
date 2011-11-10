@@ -2,20 +2,17 @@
 
 set -v # Turn on verbose logging, so that the following will present a tutorial.
 
-: # First we declare the my_array variable that we will use, as an array ('-a')
+# array(s) module api is loaded with the line 'api/array' in shell/includes.
+
+# First we declare the my_array variable that we will use, as an array ('-a')
 typeset -a my_array
 
-: # Now we assign five elements into our array.
+# Now we assign five elements into our array.
 my_array=(one two three four five)
 
-
-: # Now we load the array module API, this is normally done in the shell/includes
-: # file as simply 'api/array' but is done explicitly here for demonstration.
-includes api/array
-
-: # We can test if the array is empty, which it should be at this point.
-: # Thus the output here should be:
-: # The array is empty.
+# We can test if the array is empty, which it should be at this point.
+# Thus the output here should be:
+# The array is empty.
 if array is empty my_array
 then
   log "The array is empty."
@@ -23,20 +20,20 @@ else
   log "The array is not empty."
 fi
 
-: # Printing out the array at this point should show these five elements:
-: # one two three four five
+# Printing out the array at this point should show these five elements:
+# one two three four five
 array print my_array
 
-: # Now we add four elements to the array so that it is not empty:
+# Now we add four elements to the array so that it is not empty:
 my_array=(one two three four)
 
-: # Printing out the array at this point should show these four elements:
-: # one two three four
+# Printing out the array at this point should show these four elements:
+# one two three four
 array print my_array
 
-: # We can test if the array is empty, it should be non-empty at this point.
-: # Thus the output here should be:
-: # The array is not empty.
+# We can test if the array is empty, it should be non-empty at this point.
+# Thus the output here should be:
+# The array is not empty.
 if array is empty my_array
 then
   log "The array is empty."

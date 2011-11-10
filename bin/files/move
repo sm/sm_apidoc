@@ -2,7 +2,24 @@
 
 set -v # Turn on verbose logging, so that the following will present a tutorial.
 
-: # Load the array module API, this is normally done in the shell/includes
-: # file as simply 'api/files' but is done explicitly here for demonstration.
-includes api/files
+# file(s) module api is loaded with the line 'api/files' in shell/includes.
+
+# Now we will create a file
+file write string "Hello, World! " to /tmp/file_move_example
+
+# Let's see the file and it's contents,
+ls -l /tmp/file_move_*
+
+cat /tmp/file_move_example
+
+# We can change permissions of the file and make it read only
+file move from /tmp/file_move_example to /tmp/file_move_example_v2
+
+# Let's see the renamed file and it's contents,
+ls -l /tmp/file_move_*
+
+cat /tmp/file_move_example_v2
+
+# Now we clean up after ourselves.
+file remove /tmp/file_move_example_v2
 

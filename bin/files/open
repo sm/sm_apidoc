@@ -2,7 +2,8 @@
 
 set -v # Turn on verbose logging, so that the following will present a tutorial.
 
-: # Load the array module API, this is normally done in the shell/includes
-: # file as simply 'api/files' but is done explicitly here for demonstration.
-includes api/files
+# file(s) module api is loaded with the line 'api/files' in shell/includes.
+
+# Open /etc/hosts using a means appropriate for your operating system.
+file open /etc/hosts
 

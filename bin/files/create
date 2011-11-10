@@ -2,7 +2,17 @@
 
 set -v # Turn on verbose logging, so that the following will present a tutorial.
 
-: # Load the array module API, this is normally done in the shell/includes
-: # file as simply 'api/files' but is done explicitly here for demonstration.
-includes api/files
+# file(s) module api is loaded with the line 'api/files' in shell/includes.
+
+# Now we will create a file
+file create /tmp/file_create_example
+
+# Now let's checkout the file and it's contents,
+
+ls -l /tmp/file_create_example
+
+cat /tmp/file_create_example
+
+# Now we clean up after ourselves.
+file remove /tmp/file_create_example
 

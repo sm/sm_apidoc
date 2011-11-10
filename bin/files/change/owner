@@ -2,7 +2,19 @@
 
 set -v # Turn on verbose logging, so that the following will present a tutorial.
 
-: # Load the array module API, this is normally done in the shell/includes
-: # file as simply 'api/files' but is done explicitly here for demonstration.
-includes api/files
+# file(s) module api is loaded with the line 'api/files' in shell/includes.
 
+# Now we will create a file
+file write string "Hello, World! " to /tmp/file_owner_example
+
+# We can change the owner of the file, provided the user doing the changing that
+# the script is running as has permissions to do so. For this example we will
+# change the owner to the current script user.
+
+file change owner $USER /tmp/file_owner_example
+
+# Let's see the effects, although unfortunately this one is a bit trivial.
+ls -l /tmp/file_owner_example
+
+# Now we clean up after ourselves.
+file remove /tmp/file_owner_example
