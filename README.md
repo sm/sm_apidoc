@@ -15,7 +15,15 @@ specific API command run that API command prefixed with sm.
 
 Let's say that we want to know details about the 'array each' API command call,
 
-    sm array each
+    sm apidoc array each
 
 Will display the examples for the array each api.
+
+To see all api commands documented for 'array' api,
+
+    sm apidoc array
+
+For descriptions,
+
+    sm man apidoc array
 
