@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+# array(s) module api is loaded with the line 'api/array' in shell/includes.
+
+# To set a user's group, note that we are not running this command as it affects
+# the state of the system (disabled by prepending 'echo').
+
+echo user set group users user example
+
