@@ -18,8 +18,19 @@ Adds the content of the origin array to the destination array
 .B each
 loops over each element in a given array
 .TP 13
-.B first?
-prints out the first elements to standard output
+.B first {array}
+prints out the first element of a given array
+.TP 13
+.B first {array} index
+Prints the index of the first element of a given array. This allows you to get around shells indexing differently
+	Example: 
+		a=(one two three)
+		a[0] # one in bash, nothing in zsh
+		a[1] # two in bash, one in zsh
+		a[$(array start)]  # one
+.TP 13
+.B first {array} as [myvar]
+saves the first element of a given array in the variable myvar
 .TP 13
 .B is empty
 tests if a given array is empty
@@ -36,8 +47,19 @@ tests if the given array is nonempty
 .B largest {array}
 prints the largest (character count) element in a given array
 .TP 13
-.B last
+.B last {array}
 prints the last element a given array
+.TP 13 
+.B last {array} index
+Prints the index of the last element of a given array. This allows you to get around shells indexing differently
+	Example: 
+		a=(one two three)
+		a[0] # one in bash, nothing in zsh
+		a[1] # two in bash, one in zsh
+		a[$(array start)]  # one
+.TP 13 
+.B last {array} as [myvar]
+saves the last element of a given array on the variable myvar
 .TP 13
 .B length
 prints the element count of a given array
@@ -56,14 +78,6 @@ Sort array elements in ascending order
 .TP 13
 .B sort desc
 Sort array elements in descending order
-.TP 13
-B. start
-Prints out the index of the first element of a given array. This allows you to get around shells indexing differently
-	Example: 
-		a=(one two three)
-		a[0] # one in bash, nothing in zsh
-		a[1] # two in bash, one in zsh
-		a[$(array start)]  # one
 .TP 13
 B. unique
 Filters out all duplicated elements from a given array
