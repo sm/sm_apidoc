@@ -18,6 +18,6 @@ array print my_array
 
 # We can print out the last element of the array to standard out:
 # one
-array last "my_array"
+array last my_array
 
 

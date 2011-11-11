@@ -15,7 +15,7 @@ my_array=(one two three four five)
 array print my_array
 
 
-# This should print out the following string to standard output:
+# This should print out the first element to standard output:
 # one
 array first "my_array"
 
