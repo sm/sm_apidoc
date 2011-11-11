@@ -19,3 +19,18 @@ array print my_array
 # one
 array first "my_array"
 
+
+# We can printout the index of the first element:
+# 1
+array first "my_array" index
+
+# Let's declare a string variable
+typeset my_variable
+
+# We can specify to store the first element in a given variable name:
+array first "my_array" as "my_variable"
+
+# This should output:
+# one
+log $my_variable
+

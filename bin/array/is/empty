@@ -7,9 +7,6 @@ set -v # Turn on verbose logging, so that the following will present a tutorial.
 # First we declare the my_array variable that we will use, as an array ('-a')
 typeset -a my_array
 
-# Now we assign five elements into our array.
-my_array=(one two three four five)
-
 # We can test if the array is empty, which it should be at this point.
 # Thus the output here should be:
 # The array is empty.

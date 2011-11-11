@@ -4,7 +4,7 @@ set -v # Turn on verbose logging, so that the following will present a tutorial.
 
 # array(s) module api is loaded with the line 'api/array' in shell/includes.
 
-# First we declare the my_array variable that we will use, as an array ('-a')
+# last we declare the my_array variable that we will use, as an array ('-a')
 typeset -a my_array
 
 # Now we assign five elements into our array.
@@ -16,8 +16,20 @@ my_array=(one two three four five)
 array print my_array
 
 
-# We can print out the last element of the array to standard out:
-# one
-array last my_array
+# This should print out the last element to standard output:
+# five
+array last "my_array"
 
+# We can printout the index of the last element:
+# 5
+array last "my_array" index
 
+# Let's declare a string variable
+typeset my_variable
+
+# We can specify to store the last element in a given variable name:
+array last "my_array" as "my_variable"
+
+# This should output:
+# five
+log $my_variable
