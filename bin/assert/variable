@@ -1,0 +1,28 @@
+#!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+# assert module api is loaded with the line 'api/assert' in shell/includes.
+
+typeset my_variable
+
+my_variable="three"
+
+log step "checking if my variable is set to three"
+
+if assert variable my_variable equals three
+then
+  log step success
+else
+  log step fail
+fi
+
+log step "checking if my variable is set to four"
+
+if assert variable my_variable equals four
+then
+  log step success
+else
+  log step fail
+fi
+

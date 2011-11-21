@@ -1,0 +1,6 @@
+#!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+# assert module api is loaded with the line 'api/assert' in shell/includes.
+
