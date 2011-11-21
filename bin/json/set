@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+# json module api is loaded with the line 'api/json' in shell/includes.
+
+# json set is not yet implemented
+

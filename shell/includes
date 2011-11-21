@@ -16,3 +16,4 @@ api/traps
 api/user
 api/variables
 api/vcs
+api/json

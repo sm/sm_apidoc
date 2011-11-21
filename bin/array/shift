@@ -19,7 +19,6 @@ array print my_array
 # one
 array shift my_array
 
-
 # Printing out the array at this point should show these five elements:
 # two three four five
 array print my_array
@@ -31,7 +30,6 @@ typeset output
 # If we specify a variable name then instead of being printed to standard out
 # the first element will be stored in the given variable name, output here.
 array shift my_array variable output
-
 
 # The variable output should now contain 'two'
 echo $output
