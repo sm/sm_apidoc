@@ -10,7 +10,7 @@ my_variable="three"
 
 log step "checking if my variable is set to three"
 
-if assert variable my_variable equals three
+if assert variable my_variable equals "three"
 then
   log step success
 else
@@ -19,7 +19,16 @@ fi
 
 log step "checking if my variable is set to four"
 
-if assert variable my_variable equals four
+if assert variable my_variable equals "four"
+then
+  log step success
+else
+  log step fail
+fi
+
+log step "Running code and checking results."
+
+if assert variable my_variable equals "five" code 'my_variable=5'
 then
   log step success
 else
