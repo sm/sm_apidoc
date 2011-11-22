@@ -19,3 +19,7 @@ json get from "/tmp/apidoc.json" string "system/hostname"
 # The system's hostname should now be stored in the variable 'system_hostname':
 log "system/hostname: ${system_hostname}"
 
+json get from "/tmp/apidoc.json" string "system/hostname" as "hostname"
+
+# The system's hostname should now be stored in the variable 'hostname':
+log "hostname: ${hostname}"
