@@ -7,7 +7,7 @@ set -v # Turn on verbose logging, so that the following will present a tutorial.
 # Now we will create a file
 file write string "Hello, World! " to /tmp/file_permissions_example
 
-# We can change permissions owner of the file and make it read only
+# We can change permissions of the file and make it read only
 file change permissions 0644 /tmp/file_permissions_example
 
 # Let's see the effects,
