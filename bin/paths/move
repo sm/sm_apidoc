@@ -10,7 +10,7 @@ path create /tmp/paths/move/example
 # Let's see the path and it's contents,
 ls -l /tmp/paths/move_*
 
-# We can change permissions of the path and make it read only
+# Moves origin path to destination path
 path move from /tmp/paths/move/example to /tmp/paths/move/example_v2
 
 # Let's see the renamed path and it's contents,

@@ -7,7 +7,7 @@ set -v # Turn on verbose logging, so that the following will present a tutorial.
 # Now we will create a path
 path create /tmp/paths/copy/example
 
-# We can change permissions of the path and make it read only
+# We can copy the given path from origin to destination.
 path copy from /tmp/paths/copy/example to /tmp/paths/copy/example_v2
 
 # Let's see the paths,

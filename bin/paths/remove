@@ -11,7 +11,7 @@ path create /tmp/paths/remove
 
 ls -l /tmp/paths/
 
-# We can remove a path,
+# We can remove a path
 path remove /tmp/paths/remove
 
 # Check to make sure that the 'remove' path has been removed,
