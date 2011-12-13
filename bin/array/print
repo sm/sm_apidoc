@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+# array(s) module api is loaded with the line 'api/array' in shell/includes.
+
+# First we declare the my_array variable that we will use, as an array ('-a')
+typeset -a my_array
+
+# Now we assign five elements into our array.
+my_array=(one two three four five)
+
+# Printing out the array at this point should show these five elements:
+# one two three four five
+array print my_array
+

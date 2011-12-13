@@ -8,3 +8,6 @@ set -v # Turn on verbose logging, so that the following will present a tutorial.
 # 1
 array start
 
+# Note that this is mainly for script readability now. It was originally because
+# the bash shell indexes arrays from 0 and zsh indexes arrays from 1.
+
