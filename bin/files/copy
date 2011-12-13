@@ -7,7 +7,7 @@ set -v # Turn on verbose logging, so that the following will present a tutorial.
 # Now we will create a file
 file write string "Hello, World! " to /tmp/file_copy_example
 
-# We can change permissions of the file and make it read only
+# We can copy the contents of a file onto another. 
 file copy from /tmp/file_copy_example to /tmp/file_copy_example_v2
 
 # Let's see the files and their contents,

@@ -12,7 +12,7 @@ ls -l /tmp/file_move_*
 
 cat /tmp/file_move_example
 
-# We can change permissions of the file and make it read only
+# We can move a file from one location to another.
 file move from /tmp/file_move_example to /tmp/file_move_example_v2
 
 # Let's see the renamed file and it's contents,

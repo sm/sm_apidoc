@@ -1,4 +1,4 @@
-.TH SM 1 "2011 November 9" "SM Framework"
+.TH SM 1 "2011 November 27 SM Framework"
 
 .SH SYNOPSIS
 .B sm 
@@ -12,78 +12,98 @@ To load the files module API, add 'api/files' to the shell/includes file.
 
 .SH Actions
 .TP 13
-.B are executable 
+.B are executable {filename(s)}
+Test if all files given are executable.
 .TP 13
-.B are nonempty
+.B are nonempty {filename(s)}
+Test if all files given are nonempty.
 .TP 13
-.B are symlinks
+.B are symlinks {filename(s)}
+Test if all files given are symlinks.
 .TP 13
-.B change owner
+.B change owner {user} {filename}
+Changes the owner of the file, provided the user executing the script has permissions to do so.
 .TP 13
-.B change permissions
+.B change permissions {mode} {filename}
+Changes the permissions of a given file.
 .TP 13
-.B chmod
+.B chmod {mode} {filename}
+Changes the permissions of a given file.
 .TP 13
-.B chown
+.B chown {user} {filename}
+Changes the owner of the file, provided the user executing the script has permissions to do so.
 .TP 13
-.B copy
+.B copy from {origin} to {destination}
+Copy the contents of a file onto another. 
 .TP 13
-.B create
+.B create {filename}
+Creates a file.
 .TP 13
-.B exist?
+.B exist {filename}
+Test if multiple files exists.
 .TP 13
-.B exists?
+.B exists {filename(s)}
+Test if a file exists.
 .TP 13
-.B expand
+.B expand {filename}
+Expands the file to the full (absolute, not relative) path listing.
 .TP 13
-.B in
+.B in {path(s)}
+List all files located within given paths.
 .TP 13
-.B is empty
+.B is empty {filename}
+Tests if a file is empty.
 .TP 13
-.B is executable
+.B is executable {filename}
+Tests if a file is executable.
 .TP 13
-.B is nonemtpy
+.B is nonemtpy {filename}
+Test if a file is nonempty.
 .TP 13
-.B is symlink
+.B is symlink {filename}
+Test if a file is a symlink.
 .TP 13
-.B link
+.B link symbolic [force] from {origin} to {destination}
+Creates a symbolic link (symlink) to a given file.
 .TP 13
-.B md5
-
+.B md5 {filename}
+Gathers the md5 sum of a given file.
 .TP 13
-.B move
-
+.B move from {origin} to {destination}
+We can move a file from one location to another.
 .TP 13
-.B open
-
+.B open {filename}
+Open filename using a means appropriate for your operating system.
 .TP 13
-.B remove
-
+.B remove {filename}
+Removes filename.
 .TP 13
-.B replace
-
+.B replace regex {exp1} with {exp2} in {filename}
+Replaces a regexp with a second regexp in a given file.
 .TP 13
 .B search
-
+??
 .TP 13
-.B sha 256
-
+.B sha 256 {filename}
+Gathers the 256 bit sha sum of a given file.
 .TP 13
-.B sha 512
-
+.B sha 512 {filename}
+Gathers the 512 bit sha sum of a given file.
 .TP 13
-.B source
-
+.B source {filename(s)}
+Sources a file, if it exists.
 .TP 13
-.B touch
-
+.B touch {filename}
+Creates an empty file.
 .TP 13
-.B within
-
+.B within {path(s)}
+Lists all files located within given paths.
 .TP 13
-.B write
-
-
+.B write string {filename}
+Write another string to the file.
+.TP 13
+.B write append string {filename}
+Write another string to the file but this time append.
 
 .SH Options
 .TP 13
