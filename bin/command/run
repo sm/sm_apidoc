@@ -1,1 +1,9 @@
 #!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+# command(s) module api is loaded with the line 'api/command' in shell/includes or:
+includes api/command
+
+# Run a given command
+command run echo hello world

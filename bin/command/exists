@@ -1,1 +1,21 @@
 #!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+# command(s) module api is loaded with the line 'api/command' in shell/includes or:
+includes api/command
+
+if command exists asdf
+then
+  log "The command 'asdf' exists."
+else
+  log "The command 'asdf' does not exist."
+fi
+
+if command exists which
+then
+  log "The command 'which' exists."
+else
+  log "The command 'which' does not exist."
+fi
+

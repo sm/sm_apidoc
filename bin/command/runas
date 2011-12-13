@@ -1,1 +1,11 @@
 #!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+# command(s) module api is loaded with the line 'api/command' in shell/includes or:
+includes api/command
+
+# TODO: finish this example
+
+command run as "$USER" "whoami"
+
