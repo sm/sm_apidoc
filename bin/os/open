@@ -1,1 +1,9 @@
 #!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+# os module api is loaded with the line 'api/os' in the shell/includes.
+
+file create /tmp/temp_file
+
+os open /tmp/temp_file

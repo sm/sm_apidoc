@@ -1,1 +1,9 @@
 #!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will persent a tutorial
+
+# os module api is loaded with the line 'api/os' in shell/includes.
+
+# Count the number of cpu in current system
+os cpu count
+

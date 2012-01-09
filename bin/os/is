@@ -1,1 +1,27 @@
 #!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+# os module api is loaded with the line 'api/array' in the shell/includes.
+
+#Check if OS is running linux
+if os is linux
+then
+  log "OS is running Linux"
+#Check if OS is running BSD 
+elif os is bsd
+then
+  log "OS is running BSD"
+#Check if OS is running Darwin
+elif os is darwin
+then
+  log "OS is running Darwin"
+#Check if OS is running Solaris
+elif os is solaris
+then
+  log "OS is running Solaris"
+#Check if OS is running AIX
+elif os is aix
+then
+  log "OS is running AIX"
+fi

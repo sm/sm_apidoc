@@ -1,1 +1,27 @@
 #!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+# os module api is loaded with the line 'api/os' in shell/includes.
+
+# We can view type of os
+os type
+
+# We can determine OS based on OS type
+if os type is linux
+then
+  log "OS type is linux"
+elif os type is BSD
+then
+  log "OS type is BSD"
+elif os type is darwin
+then
+  log "OS type is Darwin"
+elif os type is solaris
+then
+  log "OS type is Solaris"
+elif os type is aix
+then
+  log "OS type is AIX"
+fi
+

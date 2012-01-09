@@ -1,1 +1,18 @@
 #!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+# os module api is loaded with the line 'api/os' in the shell/includes.
+
+# We can view architecture of the machine 
+os arch
+
+# We can view archtitecture type of the machine
+os arch type
+
+# We can determine the type of archtitecture on the machine
+if os arch type is "x86_64"
+then
+  log "The archtitecture is x86_64"
+fi
+

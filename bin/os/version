@@ -1,1 +1,17 @@
 #!/bin/sh
+
+set -v # Turn on verbose logging, so  that the following will present a tutorial.
+
+# os module api is loaded with the ling 'api/os' in shell/includes.
+
+# We can view OS version
+os version
+
+# We can view OS major version
+os version major
+
+# We can view OS minor version
+os version minor
+
+# We can view OS patch version
+os version patch
