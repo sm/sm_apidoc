@@ -11,7 +11,7 @@ os type
 if os type is linux
 then
   log "OS type is linux"
-elif os type is BSD
+elif os type is bsd
 then
   log "OS type is BSD"
 elif os type is darwin
