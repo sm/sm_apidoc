@@ -17,5 +17,8 @@ cat /tmp/README
 templates seed /tmp/README \
   app_name "My template seed"
 
+# View changes after seed
+cat /tmp/README
+
 # Clean up
 file remove /tmp/README
