@@ -1,0 +1,3 @@
+# This is an example template README file
+
+export app_name="{{app_name}}"

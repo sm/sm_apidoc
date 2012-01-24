@@ -1,1 +1,16 @@
 #!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+# templates module api is loaded with the line 'api/templates' in the shell/includes.
+
+# Templates exist is to check if template exist 
+
+# See that template exist
+if templates exist "apidoc/README"
+then
+  log "The README template exist"
+else
+  log "The README template does not exist"
+fi
+
