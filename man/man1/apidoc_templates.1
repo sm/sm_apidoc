@@ -1,0 +1,22 @@
+.TH SM 1 "2012 January 23 SM Framework"
+
+.SH SYNOPSIS
+.B sm 
+{options...} templates action {action-params}
+
+.SH DESCRIPTION
+S{cripting,ystem} Manager (SM) Framework (Core) API files documentation
+
+.SH Installation
+To load the templates  module API, add 'api/templates' to the shell/includes file.
+
+.SH Actions
+.TP 13
+.B exist
+Test if template exist
+.TP 13
+.B install {template_name} to {file_location} mode {mode_type} owner {owner_type} group {group_type} variable {variable_value}
+Install template to file location with optional parameters set after file location
+.TP 13
+.B seed {file_location} variable {variable_value}
+Change variables in already created template 
