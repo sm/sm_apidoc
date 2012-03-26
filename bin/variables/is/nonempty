@@ -2,7 +2,7 @@
 
 set -v # Turn on verbose logging, so that the following will present a tutorial.
 
-# variable(s) module api is loaded with the line 'api/variable' in shell/includes.
+# variable(s) module api is loaded with the line 'api/variables' in shell/includes.
 
 # Declare some variables, but do not populate them.
 
