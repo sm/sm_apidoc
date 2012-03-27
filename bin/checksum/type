@@ -12,7 +12,8 @@ typeset sum
 # First we generate a test file
 file write string 'Chicken' to "/tmp/checksum-source-file"
 
-# We will now run the checksum using a sha256 algorithm type, this will print the results to
+# We will now run the checksum using a sha256 algorithm type, this will print
+# the results to STDOUT
 checksum type sha256 file "/tmp/checksum-source-file"
 
 # We will now run the checksum using a sha256 algorithm type and store it into
@@ -28,8 +29,8 @@ checksum type sha256 file "/tmp/checksum-source-file" \
   to "/tmp/checksum-source-file.checksum"
 
 # Notice that there was no output to STDOUT, now let's see what is in the
-# file "/tmp/checksum-source-file"
-cat "/tmp/checksum-source-file"
+# file "/tmp/checksum-source-file.checksum"
+cat "/tmp/checksum-source-file.checksum"
 
 # Let's compare the checksum against the word 'narfnarf', this should not match.
 if checksum type sha256 file "/tmp/checksum-source-file" checksum "narfnarf"
