@@ -1,6 +1,7 @@
 api/array
 api/command
 api/config
+api/checksum
 api/dates
 api/files
 api/interactive

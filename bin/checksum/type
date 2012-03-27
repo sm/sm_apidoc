@@ -1,0 +1,44 @@
+#!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+# checksum(s) module api is loaded with the line 'api/checksum' in an
+# extension's shell/includes file.
+
+# First we declare the 'sum' variable, a string variable that we will use later
+# to store a checksum in.
+typeset sum
+
+# First we generate a test file
+file write string 'Chicken' to "/tmp/checksum-source-file"
+
+# We will now run the checksum using a sha256 algorithm type, this will print the results to
+checksum type sha256 file "/tmp/checksum-source-file"
+
+# We will now run the checksum using a sha256 algorithm type and store it into
+# the variable named 'sum'
+checksum type sha256 file "/tmp/checksum-source-file" variable sum
+
+# Notice that there was no output to STDOUT, now let's see what is in the
+# variable 'sum'
+log ${sum}
+
+# We now calculate the checksum and store the result in a specified target file.
+checksum type sha256 file "/tmp/checksum-source-file" \
+  to "/tmp/checksum-source-file.checksum"
+
+# Notice that there was no output to STDOUT, now let's see what is in the
+# file "/tmp/checksum-source-file"
+cat "/tmp/checksum-source-file"
+
+# Let's compare the checksum against the word 'narfnarf', this should not match.
+if checksum type sha256 file "/tmp/checksum-source-file" checksum "narfnarf"
+then log 'checksum matches!'
+else log 'checksum does not match!' ; fi
+
+# Now if we compare the checksum of the source file against the checksum
+# computed earlier it should match.
+if checksum type sha256 file "/tmp/checksum-source-file" checksum "${sum}"
+then log 'checksum matches!'
+else log 'checksum does not match!' ; fi
+
