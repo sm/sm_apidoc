@@ -32,8 +32,8 @@ checksum type sha256 file "/tmp/checksum-source-file" \
 # file "/tmp/checksum-source-file.checksum"
 cat "/tmp/checksum-source-file.checksum"
 
-# Let's compare the checksum against the word 'narfnarf', this should not match.
-if checksum type sha256 file "/tmp/checksum-source-file" checksum "narfnarf"
+# Now compare checksum against the word 'shafrickinsha', this should not match.
+if checksum type sha256 file "/tmp/checksum-source-file" checksum "shafrickinsha"
 then log 'checksum matches!'
 else log 'checksum does not match!' ; fi
 
