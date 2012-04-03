@@ -1,3 +1,7 @@
 # This is an example template README file
 
-export app_name="{{app_name}}"
+application="{{application_name}}"
+environment="{{environment_name}}"
+
+export application environment
+

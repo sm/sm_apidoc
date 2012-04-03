@@ -13,13 +13,11 @@ set -v # Turn on verbose logging, so that the following will present a tutorial.
 # Ownership types are mode, owner, group
 # Note: namespace is required to use templates such as 'apidoc/README'
 
-
 # Install the template README with no variables passed in
 templates install "apidoc/README" to /tmp/README
 
 # View template created
 cat /tmp/README
-
 
 # Install the template README and set app name
 templates install "apidoc/README" to /tmp/README \
@@ -29,16 +27,22 @@ templates install "apidoc/README" to /tmp/README \
 cat /tmp/README
 
 # Install the template README and set ownership
-templates install "apidoc/README" to /tmp/README \
-  mode 0776 owner "${user}"
+templates install "apidoc/README" \
+  to "/tmp/README" \
+  mode 0776 \
+  owner "${user}"
 
 # View ownership
 ls -lh /tmp/README
 
 # Install the template README and set app name and variable
-templates install "apidoc/README" to /tmp/README \
-  mode 0666 owner "${user}" \
-  app_name "Test App name"
+templates install "apidoc/README" \
+  to /tmp/README \
+  mode 0666 \
+  owner "${user}" \
+  variables \
+    application_name "test-application" \
+    environment_name "production"
 
 # View ownership
 ls -lh /tmp/README
@@ -48,3 +52,4 @@ cat /tmp/README
 
 # Clean up
 file remove /tmp/README
+
