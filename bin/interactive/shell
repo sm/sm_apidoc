@@ -1,0 +1,13 @@
+#!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+# interactive(s) module is loaded with line 'api/interactive' in an
+# extension's shell/includes file.
+
+if shell is interactive 
+then
+  log "This shell is interactive!"
+else
+  log "This shell is not interactive."
+fi

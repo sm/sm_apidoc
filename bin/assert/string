@@ -4,3 +4,31 @@ set -v # Turn on verbose logging, so that the following will present a tutorial.
 
 # assert module api is loaded with the line 'api/assert' in shell/includes.
 
+if assert string "test" equals "test"
+then
+  log "The string test is equal to test!"
+else
+  log "The string test is not equal to test!"
+fi
+
+if assert string "test" equals "fail"
+then
+  log "The string test is equal to fail!"
+else
+  log "The string test is not equal to fail!"
+fi
+
+if assert string "" is empty
+then
+  log "The string is empty!"
+else
+  log "The string is not empty!"
+fi
+
+if assert string "non empty" is nonempty
+then
+  log "The string is non empty!"
+else
+  log "The string is empty!"
+fi
+
