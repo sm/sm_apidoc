@@ -50,6 +50,22 @@ ls -lh /tmp/README
 # View template created
 cat /tmp/README
 
+# Clean up 
+file remove /tmp/README
+
+# Declare variable
+typeset -a _variables
+
+# Set variable 
+_variables+=("application_name" "awesome_name" "environment_name" "staging")
+
+# Install the template README using variables from
+templates install "apidoc/README" \
+  to /tmp/README \
+  variables from _variables
+
+cat /tmp/README
+
 # Clean up
 file remove /tmp/README
 
