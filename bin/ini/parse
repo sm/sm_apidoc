@@ -1,0 +1,28 @@
+#!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+path create /tmp/$$
+path enter /tmp/$$
+# json module api is loaded with the line 'api/ini' in shell/includes.
+
+
+# First let us write an ini file:
+file write to file.ini string "
+# Section a
+[a]
+keya=valuea
+
+# Section b
+[b]
+keyb=valueb
+"
+
+# Now let's watch the values parsed into varaible assignments:
+
+ini parse file file.ini
+
+# As fascinating as 'ini parse' is, you likely want 'ini load' most of the time.
+
+set +v
+path remove recursively force /tmp/$$

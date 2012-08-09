@@ -1,0 +1,39 @@
+#!/bin/sh
+
+set -v # Turn on verbose logging, so that the following will present a tutorial.
+
+path create /tmp/$$
+path enter /tmp/$$
+# json module api is loaded with the line 'api/ini' in shell/includes.
+
+
+# First let us write an ini file:
+file write to file.ini string "
+# Section a
+[a]
+keya=value a,a
+keyb=value a,b
+
+# Section b
+[b]
+keya=value b,a
+"
+
+# Now let's watch the values parsed into varaible assignments:
+
+ini load file file.ini
+
+# Now we can examine new variables in our environment:
+
+# Let's examine the value laoded for section a, key a
+echo ${a_keya}
+
+# Let's examine the value laoded for section a, key b
+echo ${a_keyb}
+
+# Let's examine the value laoded for section b, key c
+echo ${b_keya}
+
+set +v
+path remove recursively force /tmp/$$
+
