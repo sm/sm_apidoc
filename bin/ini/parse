@@ -4,8 +4,8 @@ set -v # Turn on verbose logging, so that the following will present a tutorial.
 
 path create /tmp/$$
 path enter /tmp/$$
-# json module api is loaded with the line 'api/ini' in shell/includes.
 
+# ini module api is loaded with the line 'api/ini' in shell/includes.
 
 # First let us write an ini file:
 file write to file.ini string "
